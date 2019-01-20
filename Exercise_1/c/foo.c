@@ -6,16 +6,16 @@ int i = 0;
 // Note the return type: void*
 void* incrementingThreadFunction(){
     // TODO: increment i 1_000_000 times
-    for( a = 0; a < 1000000; a += 1){    
-        i += 1
+    for( int a = 0; a < 1000000; a += 1){    
+        i += 1;
     }
     return NULL;
 }
 
 void* decrementingThreadFunction(){
     // TODO: decrement i 1_000_000 times
-    for( a = 0; a < 1000000; a += 1){    
-        i -= 1
+    for( int  a = 0; a < 1000000; a += 1){    
+        i -= 1;
     }
     return NULL;
 }
