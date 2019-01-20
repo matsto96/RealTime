@@ -1,0 +1,41 @@
+# Reasons for concurrency and parallelism
+
+
+To complete this exercise you will have to use git. Create one or several commits that adds answers to the following questions and push it to your groups repository to complete the task.
+
+When answering the questions, remember to use all the resources at your disposal. Asking the internet isn't a form of "cheating", it's a way of learning.
+
+ ### What is concurrency? What is parallelism? What's the difference?
+ > Concurrency means that some operations looks like they are running at the same time, while parallelism means that operations are running in parallell.
+ 
+ ### Why have machines become increasingly multicore in the past decade?
+ > It makes it possible to run multiple threads, so that programs can run faster and you can run more at one time. Also you can
+   make better use of the CPU while some processes are waiting for a signal.
+ 
+ ### What kinds of problems motivates the need for concurrent execution?
+ (Or phrased differently: What problems do concurrency help in solving?)
+ > 
+ 
+ ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
+ (Come back to this after you have worked on part 4 of this exercise)
+ > The programmer's life gets harder, while the people using it gets it easier.
+ 
+ ### What are the differences between processes, threads, green threads, and coroutines?
+ > Processes: Independent, can be multiple threads. Instances of programs.
+   Threads: Often a part of a process. Smallest part which can be organised by a scheduler.
+   Green threads: Threads scheduled by something else than the OS.
+   Coroutines: The programmer has more control when to switch threads.
+ 
+ ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
+ > pthread_create(): Create thread
+   threading.Thread(): Creating a subtrhead
+   go: Creates a gorutine.
+ 
+ ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
+ > Protects python objects s.t. only on thread has access to the resource.
+ 
+ ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
+ > Multiprocessing
+ 
+ ### What does `func GOMAXPROCS(n int) int` change? 
+ > Limits the number of threads that can run simultaneousely.
